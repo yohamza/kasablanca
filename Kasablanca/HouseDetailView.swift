@@ -10,13 +10,27 @@ import SceneKit
 
 struct HouseDetailView: View {
     let house: House
+    @State private var showARView: Bool = false
     var body: some View {
         
         ScrollView {
             VStack(alignment: .leading){
                 
-                SceneView(scene: SCNScene(named: house.modelName), options: [.autoenablesDefaultLighting, .allowsCameraControl])
-                    .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 1.25)
+                ZStack(alignment: .topTrailing) {
+                    SceneView(scene: SCNScene(named: house.modelName), options: [.autoenablesDefaultLighting, .allowsCameraControl])
+                        .frame(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width / 1.25)
+                    
+                    Image(systemName: "square.3.layers.3d")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .padding()
+                        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(.gray).opacity(0.5))
+                        .padding()
+                        .onTapGesture {
+                            self.showARView = true
+                        }
+                }
                 
                 Spacer().frame(height: 2)
                 
@@ -110,6 +124,8 @@ struct HouseDetailView: View {
                     .font(.body)
                     .padding(.horizontal, 10)
                 
+            }.fullScreenCover(isPresented: $showARView) {
+                HouseARScreen(modelName: house.modelName)
             }
         }
         
@@ -122,3 +138,4 @@ struct HouseDetailView_Previews: PreviewProvider {
         HouseDetailView(house: House.houses[0])
     }
 }
+

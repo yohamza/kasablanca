@@ -20,6 +20,7 @@
 		BB187C1C2A2B265300F8B3F6 /* HouseWithRoadway.usdz in Resources */ = {isa = PBXBuildFile; fileRef = BB187C142A2B265300F8B3F6 /* HouseWithRoadway.usdz */; };
 		BB187C202A2B27CE00F8B3F6 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB187C1F2A2B27CE00F8B3F6 /* House.swift */; };
 		BB187C222A2B489C00F8B3F6 /* HouseDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB187C212A2B489C00F8B3F6 /* HouseDetailView.swift */; };
+		BB9003C62A3DCAE60073093C /* HouseARScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB9003C52A3DCAE60073093C /* HouseARScreen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		BB187C142A2B265300F8B3F6 /* HouseWithRoadway.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = HouseWithRoadway.usdz; sourceTree = "<group>"; };
 		BB187C1F2A2B27CE00F8B3F6 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
 		BB187C212A2B489C00F8B3F6 /* HouseDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailView.swift; sourceTree = "<group>"; };
+		BB9003C52A3DCAE60073093C /* HouseARScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseARScreen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				BB187C032A2B257600F8B3F6 /* Assets.xcassets */,
 				BB187C052A2B257600F8B3F6 /* Preview Content */,
 				BB187C212A2B489C00F8B3F6 /* HouseDetailView.swift */,
+				BB9003C52A3DCAE60073093C /* HouseARScreen.swift */,
 			);
 			path = Kasablanca;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB9003C62A3DCAE60073093C /* HouseARScreen.swift in Sources */,
 				BB187C022A2B257300F8B3F6 /* ContentView.swift in Sources */,
 				BB187C202A2B27CE00F8B3F6 /* House.swift in Sources */,
 				BB187C222A2B489C00F8B3F6 /* HouseDetailView.swift in Sources */,
@@ -322,6 +326,7 @@
 				DEVELOPMENT_TEAM = YAUHAKHJVJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to function properly";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -351,6 +356,7 @@
 				DEVELOPMENT_TEAM = YAUHAKHJVJ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "This app requires camera access to function properly";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
