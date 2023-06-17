@@ -87,6 +87,7 @@ struct ARViewContainer: UIViewRepresentable {
         
         // Create an anchor entity for positioning the model
         let anchorEntity = AnchorEntity(plane: .horizontal)
+        anchorEntity.position = SIMD3<Float>(0, 0, -2)
         
         // Add the model entity to the scene
         anchorEntity.addChild(modelEntity)
